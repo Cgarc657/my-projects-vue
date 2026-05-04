@@ -1,14 +1,10 @@
 <script setup>
 import { reactive } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
 import { useTitle } from '@vueuse/core'
 import AppButton from '@/components/AppButton.vue'
 import FormField from '@/components/FormField.vue'
 
 useTitle('Sign in · Projects')
-
-const router = useRouter()
-const route = useRoute()
 
 const form = reactive({ email: '', password: '' })
 </script>
