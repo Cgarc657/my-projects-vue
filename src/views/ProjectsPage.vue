@@ -195,7 +195,13 @@ onMounted(() => {
       v-else
       class="rise rise-2 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
-      <h1>show me the projects</h1>
+      <ProjectCard
+        v-for="project in list"
+        :key="project.id"
+        :project="project"
+        @edit="openEdit"
+        @delete="onDelete"
+      />
     </div>
   </main>
 </template>
